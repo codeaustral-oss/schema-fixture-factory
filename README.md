@@ -1,5 +1,8 @@
 # Schema Fixture Factory
 
+[![CI](https://github.com/codeaustral-oss/schema-fixture-factory/actions/workflows/ci.yml/badge.svg)](https://github.com/codeaustral-oss/schema-fixture-factory/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 Generate deterministic, useful JSON fixtures from JSON Schema.
 
 ## Why
@@ -16,6 +19,7 @@ npm install schema-fixture-factory
 
 ```bash
 npx schema-fixture-factory user.schema.json --seed docs
+npx schema-fixture-factory catalog.schema.json --array-length 4 --max-depth 8
 ```
 
 ## Library
@@ -41,6 +45,7 @@ const user = generateFixture({
 - `oneOf`, `anyOf`, and shallow `allOf`
 - String formats: `email`, `uri`, `url`, `uuid`, `date`, `date-time`
 - Deterministic seeds for repeatable fixtures
+- CLI controls for required-only output, array length, recursion depth, and version reporting
 
 ## Development
 
